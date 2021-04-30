@@ -19,7 +19,7 @@ public class RetrofitConfigs {
     public static String baseUrl = "https://empresas.ioasys.com.br";
 
     private Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("")
+            .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 
