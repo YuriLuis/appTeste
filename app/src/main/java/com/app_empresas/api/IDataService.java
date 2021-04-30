@@ -20,7 +20,6 @@ public interface IDataService {
     @POST("/api/v1/users/auth/sign_in")
     Call<Void> tryLoginRequest(@Field("email") String email,
                                @Field("password") String password);
-
     @GET("/api/v1/enterprises")
     Call<JsonObject> getEntreprises(@Header("access-token") String acessToken,
                                     @Header("uid") String uid,
@@ -28,11 +27,8 @@ public interface IDataService {
 
     );
 
-
     @GET("{parametro}")
     Call<JsonObject> getPhotos(@Path("parametro") String parametro
 
     );
-
-
 }
